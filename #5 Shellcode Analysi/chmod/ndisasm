@@ -1,0 +1,53 @@
+00000000  5C                pop esp
+00000001  7839              js 0x3c
+00000003  395C7836          cmp [eax+edi*2+0x36],ebx
+00000007  61                popa
+00000008  5C                pop esp
+00000009  7830              js 0x3b
+0000000B  665C              pop sp
+0000000D  7835              js 0x44
+0000000F  385C7835          cmp [eax+edi*2+0x35],bl
+00000013  325C7865          xor bl,[eax+edi*2+0x65]
+00000017  385C7830          cmp [eax+edi*2+0x30],bl
+0000001B  635C7830          arpl [eax+edi*2+0x30],bx
+0000001F  305C7830          xor [eax+edi*2+0x30],bl
+00000023  305C7830          xor [eax+edi*2+0x30],bl
+00000027  305C7832          xor [eax+edi*2+0x32],bl
+0000002B  665C              pop sp
+0000002D  7836              js 0x65
+0000002F  355C783734        xor eax,0x3437785c
+00000034  5C                pop esp
+00000035  7836              js 0x6d
+00000037  335C7832          xor ebx,[eax+edi*2+0x32]
+0000003B  665C              pop sp
+0000003D  7837              js 0x76
+0000003F  335C7836          xor ebx,[eax+edi*2+0x36]
+00000043  385C7836          cmp [eax+edi*2+0x36],bl
+00000047  315C7836          xor [eax+edi*2+0x36],ebx
+0000004B  345C              xor al,0x5c
+0000004D  7836              js 0x85
+0000004F  665C              pop sp
+00000051  7837              js 0x8a
+00000053  37                aaa
+00000054  5C                pop esp
+00000055  7830              js 0x87
+00000057  305C7835          xor [eax+edi*2+0x35],bl
+0000005B  625C7836          bound ebx,[eax+edi*2+0x36]
+0000005F  385C7862          cmp [eax+edi*2+0x62],bl
+00000063  365C              ss pop esp
+00000065  7830              js 0x97
+00000067  315C7830          xor [eax+edi*2+0x30],ebx
+0000006B  305C7830          xor [eax+edi*2+0x30],bl
+0000006F  305C7835          xor [eax+edi*2+0x35],bl
+00000073  395C7863          cmp [eax+edi*2+0x63],ebx
+00000077  645C              fs pop esp
+00000079  7838              js 0xb3
+0000007B  305C7836          xor [eax+edi*2+0x36],bl
+0000007F  61                popa
+00000080  5C                pop esp
+00000081  7830              js 0xb3
+00000083  315C7835          xor [eax+edi*2+0x35],ebx
+00000087  385C7863          cmp [eax+edi*2+0x63],bl
+0000008B  645C              fs pop esp
+0000008D  7838              js 0xc7
+0000008F  300A              xor [edx],cl
